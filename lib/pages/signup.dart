@@ -285,7 +285,7 @@ class _SignUpState extends State<SignUp> {
                                   Text(
                                     " Войдите!",
                                     style: TextStyle(
-                                        color: Color(0xFF7f30fe),
+                                        color: Colors.cyan,
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.w500),
                                   )

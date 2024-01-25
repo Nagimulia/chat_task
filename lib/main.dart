@@ -1,6 +1,7 @@
 import 'package:chat_task/firebase_options.dart';
 import 'package:chat_task/generated/l10n.dart';
 import 'package:chat_task/pages/chatpage.dart';
+import 'package:chat_task/pages/forgotpassword.dart';
 import 'package:chat_task/pages/home.dart';
 import 'package:chat_task/pages/signin.dart';
 import 'package:chat_task/pages/signup.dart';
@@ -21,19 +22,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-          localizationsDelegates: [
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: S.delegate.supportedLocales,
+      localizationsDelegates: [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
       title: 'Chat',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
-      home: SignIn(),
+      home: ForgotPassword(),
     );
   }
 }
-
-
