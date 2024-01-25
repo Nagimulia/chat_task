@@ -19,6 +19,7 @@ class _ChatPageState extends State<ChatPage> {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 1.12,
               decoration: BoxDecoration(
+                  color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
                       topRight: Radius.circular(30))),
@@ -28,7 +29,10 @@ class _ChatPageState extends State<ChatPage> {
               child: Row(
                 children: [
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      // Navigator.pushReplacement(context,
+                      //     MaterialPageRoute(builder: (context) => Home()));
+                    },
                     child: Icon(
                       Icons.arrow_back_ios_new_outlined,
                       color: Color(0Xffc199cd),
@@ -50,26 +54,18 @@ class _ChatPageState extends State<ChatPage> {
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(12)),
+                      borderRadius: BorderRadius.circular(30)),
                   child: TextField(
+                    // controller: messagecontroller,
                     decoration: InputDecoration(
-                      prefixIcon: GestureDetector(
-                        child: Icon(
-                          Icons.attach_file,
-                          color: Colors.black,
-                        ),
-                      ),
-                      border: InputBorder.none,
-                      hintText: "Type a message",
-                      hintStyle: TextStyle(color: Colors.black45),
-                      suffixIcon: GestureDetector(
-                        onTap: () {},
-                        child: Icon(
-                          Icons.audio_file_outlined,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
+                        border: InputBorder.none,
+                        hintText: "Сообщение",
+                        hintStyle: TextStyle(color: Colors.black45),
+                        suffixIcon: GestureDetector(
+                            onTap: () {
+                              // addMessage(true);
+                            },
+                            child: Icon(Icons.send_rounded))),
                   ),
                 ),
               ),

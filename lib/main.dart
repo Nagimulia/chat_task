@@ -1,10 +1,14 @@
+import 'package:chat_task/firebase_options.dart';
 import 'package:chat_task/pages/chatpage.dart';
 import 'package:chat_task/pages/home.dart';
 import 'package:chat_task/pages/signin.dart';
 import 'package:chat_task/pages/signup.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -18,7 +22,7 @@ class MyApp extends StatelessWidget {
       title: 'Chat',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
-      home: ChatPage(),
+      home: SignUp(),
     );
   }
 }
