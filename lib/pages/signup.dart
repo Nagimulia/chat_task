@@ -54,7 +54,7 @@ class _SignUpState extends State<SignUp> {
 
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text(
-          "Registered Successfully",
+          "Регистрация прошла успешно",
           style: TextStyle(fontSize: 20.0),
         )));
         Navigator.pushReplacement(
@@ -64,14 +64,14 @@ class _SignUpState extends State<SignUp> {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
               backgroundColor: Colors.orangeAccent,
               content: Text(
-                "Password Provided is too Weak",
+                "Предоставленный пароль слишком слабый",
                 style: TextStyle(fontSize: 18.0),
               )));
         } else if (e.code == 'email-already-in-use') {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
               backgroundColor: Colors.orangeAccent,
               content: Text(
-                "Account Already exists",
+                "Аккаунт уже существует",
                 style: TextStyle(fontSize: 18.0),
               )));
         }
@@ -155,7 +155,7 @@ class _SignUpState extends State<SignUp> {
                                   controller: namecontroller,
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {
-                                      return 'Please Enter Name';
+                                      return 'Пожалуйста, введите имя';
                                     }
                                     return null;
                                   },

@@ -45,14 +45,14 @@ class _SignInState extends State<SignIn> {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             backgroundColor: Colors.orangeAccent,
             content: Text(
-              "No User Found for that Email",
+              "Пользователь для этого адреса электронной почты не найден",
               style: TextStyle(fontSize: 18.0, color: Colors.black),
             )));
       } else if (e.code == 'wrong-password') {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             backgroundColor: Colors.orangeAccent,
             content: Text(
-              "Wrong Password Provided by User",
+              "Неверный пароль предоставлен пользователем",
               style: TextStyle(fontSize: 18.0, color: Colors.black),
             )));
       }
@@ -77,7 +77,7 @@ class _SignInState extends State<SignIn> {
               children: [
                 Center(
                     child: Text(
-                  "SignIn",
+                  "Войти",
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 24.0,
@@ -85,7 +85,7 @@ class _SignInState extends State<SignIn> {
                 )),
                 Center(
                     child: Text(
-                  "Login to your account",
+                  "Войдите в свой аккаунт",
                   style: TextStyle(
                       color: Colors.cyan,
                       fontSize: 18.0,
@@ -252,7 +252,7 @@ class _SignInState extends State<SignIn> {
                             MaterialPageRoute(builder: (context) => SignUp()));
                       },
                       child: Text(
-                        " Sign Up Now!",
+                        " Войти ",
                         style: TextStyle(
                             color: Colors.cyan,
                             fontSize: 16.0,
