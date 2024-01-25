@@ -14,7 +14,7 @@ class _SignInState extends State<SignIn> {
       body: Stack(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height / 3.5,
+            height: MediaQuery.of(context).size.height / 1.5,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -66,7 +66,6 @@ class _SignInState extends State<SignIn> {
                     child: Container(
                       padding:
                           EdgeInsets.symmetric(vertical: 50, horizontal: 20),
-                      height: MediaQuery.of(context).size.height / 2,
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                         color: Colors.white,
